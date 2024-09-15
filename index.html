@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltimateShitpost</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white; 
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain; 
+            background-attachment: fixed; 
+            font-family: Arial, sans-serif;
+        }
+
+        h1, p {
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 80%;
+            max-width: 800px;
+            border: 5px solid #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px; 
+        }
+
+        .refreshButton {
+            font-size: 18px;
+            color: #333;
+            background-color: #FFD700; 
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 4px;
+            background-image: linear-gradient(to bottom, #FFD700 0%, #FFA500 100%);
+            box-shadow: 0 4px #999;
+        }
+
+        .refreshButton:hover {
+            background-color: #FFA500;
+        }
+
+        .refreshButton:active {
+            background-color: #FFA500;
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <h1>UltimateShitpost</h1>
+    <p>Click the "New Video" button for new videos</p>
+
+    <video id="randomVideo" controls autoplay>
+        <source id="videoSource" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <button class="refreshButton" onclick="window.location.reload();">New Video</button>
+
+    <script>
+        const videos = [
+            'shits/sry.mp4',
+            'shits/zipzipzip.mp4',
+            'shits/pain.mp4',
+            'shits/atlas.mp4',
+            'shits/xp.mp4',
+            'shits/desprizzable.mp4'
+        ];
+
+        function getRandomVideo() {
+            const randomIndex = Math.floor(Math.random() * videos.length);
+            return videos[randomIndex];
+        }
+
+        const videoElement = document.getElementById('randomVideo');
+        const videoSource = document.getElementById('videoSource');
+        const randomVideo = getRandomVideo();
+        videoSource.src = randomVideo;
+
+        videoElement.load();
+    </script>
+</body>
+</html>
