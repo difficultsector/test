@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UltimateShitpost</title>
+    <link rel="icon" href="fav.png" type="image/png">
     <style>
         body {
             margin: 0;
@@ -50,26 +51,29 @@
 
         .refreshButton {
             font-size: 18px;
-            color: #333;
-            background-color: #FFD700; 
-            border: none;
+            color: black; /* Changed to more closely match the old YouTube style */
+            background-color: #F4E200; /* More accurate yellow color */
+            border: 1px solid #FFD700; /* Subtle border for depth */
             padding: 10px 20px;
             text-align: center;
             display: inline-block;
             cursor: pointer;
-            border-radius: 4px;
-            background-image: linear-gradient(to bottom, #FFD700 0%, #FFA500 100%);
-            box-shadow: 0 4px #999;
+            border-radius: 0; /* Old YouTube buttons had no rounded corners */
+            background-image: linear-gradient(to bottom, #F4E200 0%, #D4BF00 100%); /* Gradient more similar to the 2008 style */
+            box-shadow: 0 2px #C1A300; /* Smaller shadow for a pressed effect */
+            font-weight: bold; /* Bold text */
+            font-family: 'Arial', sans-serif; /* Ensure font consistency */
         }
 
         .refreshButton:hover {
-            background-color: #FFA500;
+            background-color: #E4C100; /* Darker on hover */
+            background-image: linear-gradient(to bottom, #E4C100 0%, #C1A300 100%);
         }
 
         .refreshButton:active {
-            background-color: #FFA500;
-            box-shadow: 0 2px #666;
-            transform: translateY(2px);
+            background-color: #C1A300; /* Even darker when clicked */
+            box-shadow: 0 1px #B0A300; /* Less depth when pressed */
+            transform: translateY(1px); /* Smaller translateY effect for subtle button press */
         }
     </style>
 </head>
